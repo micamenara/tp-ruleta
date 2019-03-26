@@ -2,7 +2,7 @@ import numpy as np
 import statistics as stats
 import matplotlib.pyplot as plt
 
-rand = np.random.randint(low = 0, high = 37, size = 100)
+rand = np.random.randint(low = 0, high = 37, size = 1000)
 
 prom = [rand[0], rand[1]]
 desv = [stats.stdev(prom)]
@@ -11,5 +11,5 @@ for idx, val in enumerate(rand):
 		prom.append(val)
 		des = stats.stdev(prom)
 		desv.append(des)
-plt.plot(desv)
+plt.plot(desv, color = "green")
 plt.show()
